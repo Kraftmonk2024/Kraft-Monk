@@ -1,6 +1,6 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const UIUXProductDesign = () => {
+const UIUXProductDesign = forwardRef((props, ref) => {
   return (
     <div className="w-full flex flex-col mt-52 px-8 md:px-36">
       <div className="w-full max-w-[1240px] mb-16 flex flex-col gap-6">
@@ -30,12 +30,18 @@ const UIUXProductDesign = () => {
       <div className="grid grid-rows-2 grid-cols-3 gap-4">
         {Array.from({ length: 6 }).map((_, index) => (
           <div key={index}>
-            <img className="w-full h-full" src="card1.png" alt="Design Card" />
+            {index < 6 && (
+              <img
+                className="w-full h-full"
+                src={`./images2/product${index + 1}.jpg`}
+                alt="Design Card"
+              />
+            )}
           </div>
         ))}
       </div>
     </div>
   );
-};
+});
 
 export default UIUXProductDesign;

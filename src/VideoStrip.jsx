@@ -1,7 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 // import video from "";
-const VideoStrip = () => {
-  const videoItems = Array(8).fill("sample.mp4"); // Placeholder for multiple videos
+const VideoStrip = forwardRef((props, ref) => {
+  const videoItems = [
+    './videos/video1.mp4',
+    './videos/video2.mp4',
+    './videos/video3.mp4',
+    './videos/video1.mp4',
+  ] // Placeholder for multiple videos
 
   return (
     <div className="w-full flex flex-col mt-52 overflow-hidden h-[125vh]">
@@ -14,15 +19,15 @@ const VideoStrip = () => {
         </h1>
       </div>
 
-      <div className="w-[110%] relative flex origin-top-left rotate-[-7deg] py-44">
-        <div className="absolute left-[-4%]">
+      <div className="w-[100%] relative flex origin-top-left rotate-[-0deg] py-2">
+        <div className="flex justify-center w-full">
           <div className="flex animate-scroll2">
             {videoItems.map((videoSrc, index) => (
               <div className="flex-shrink-0 px-4" key={index}>
                 <div className="relative video-container">
                   <video
                     className="w-[20vw] h-[496.07px] object-cover rounded-[24.80px]"
-                    autoplay
+                    autoPlay
                     muted
                     loop
                     playsInline
@@ -32,7 +37,7 @@ const VideoStrip = () => {
                   <div className="overlay absolute inset-0 transition-opacity duration-300">
                     <img
                       className="w-full h-full object-cover rounded-[24.80px]"
-                      src="card2.png"
+                      src={`./images/img${index + 1}.jpg`}
                       alt={`Card ${index + 1}`}
                     />
                     <div className="overlay absolute inset-0 bg-black bg-opacity-20 rounded-[24.80px]"></div>
@@ -48,6 +53,6 @@ const VideoStrip = () => {
       </div>
     </div>
   );
-};
+});
 
 export default VideoStrip;

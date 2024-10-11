@@ -13,7 +13,8 @@
     "@emotion/react": "^11.13.3",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-sticky": "^6.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

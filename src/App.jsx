@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import Strips from "./Strips";
@@ -16,6 +16,13 @@ import Footer from "./Footer.jsx";
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  // Create refs for each section
+  const graphicsSectionRef = useRef(null);
+  const uiuxSectionRef = useRef(null);
+  const webDevSectionRef = useRef(null);
+  const videoSectionRef = useRef(null);
+
+  // Track mouse movement for the cursor
   useEffect(() => {
     const handleMouseMove = (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
@@ -28,6 +35,20 @@ const App = () => {
     };
   }, []);
 
+  // Function to scroll to the desired section
+  const scrollToSection = (sectionRef) => {
+    if (sectionRef.current) {
+      console.log("Scrolling to: ", sectionRef.current);
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth", // Smooth scroll
+        block: "start", // Align to top of the viewport
+        inline: "nearest", // Prevent unwanted horizontal scrolling
+      });
+    }
+  };
+
+  
+
   return (
     <div className="w-full bg-primary relative">
       <Cursor mousePosition={mousePosition} />
@@ -35,12 +56,17 @@ const App = () => {
         <Navbar />
         <HeroSection />
         <Strips />
-        <WhatWeDoSection />
+        <WhatWeDoSection
+          onGraphicsClick={() => scrollToSection(graphicsSectionRef)}
+          onUIUXClick={() => scrollToSection(uiuxSectionRef)}
+          onWebDevClick={() => scrollToSection(webDevSectionRef)}
+          onVideoClick={() => scrollToSection(videoSectionRef)}
+        />
         <WhatWeWorkSection />
-        <GraphicsSection />
-        <WebAppDevelopment />
-        <UIUXProductDesign />
-        <VideoStrip />
+        <GraphicsSection ref={graphicsSectionRef} />
+        <WebAppDevelopment ref={webDevSectionRef} />
+        <UIUXProductDesign ref={uiuxSectionRef} />
+        <VideoStrip ref={videoSectionRef} />
         <ContactSection />
         <ExperienceSection />
         <Footer />

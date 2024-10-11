@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 
 const ScrollingRow = ({ children }) => {
   const scrollRef = useRef(null);
@@ -30,9 +30,9 @@ const ScrollingRow = ({ children }) => {
   );
 };
 
-const GraphicsSection = () => {
+const GraphicsSection = forwardRef((props, ref) => {
   return (
-    <div className="w-full flex flex-col py-24 overflow-y-hidden">
+    <div ref={ref} className="w-full flex flex-col py-24 overflow-y-hidden">
       {/* Header Section */}
       <div className="w-full max-w-[1240px] mb-16 flex flex-col gap-6 px-8 md:px-36">
         <div className="text-start text-white text-4xl font-normal font-['Inter'] leading-10">
@@ -118,6 +118,6 @@ const GraphicsSection = () => {
       </div>
     </div>
   );
-};
+});
 
 export default GraphicsSection;

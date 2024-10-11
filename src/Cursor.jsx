@@ -19,9 +19,9 @@ const Cursor = () => {
       });
 
       gsap.to(blurRef.current, {
-        x: x - 250,
-        y: y - 250,
-        duration: 0.6,
+        x: x - 150,
+        y: y - 150,
+        duration: 1,
         ease: "power3.out",
       });
     };
@@ -38,12 +38,12 @@ const Cursor = () => {
       <div
         ref={cursorRef}
         id="cursor"
-        className="h-5 w-5 bg-[#ff5000] rounded-full fixed z-50 pointer-events-none"
+        className="h-3 w-3 bg-[#ff5000] rounded-full fixed z-50 pointer-events-none"
       ></div>
       <div
         ref={blurRef}
         id="cursor-blur"
-        className="h-[500px] w-[500px] bg-[#ff5000] opacity-30 rounded-full fixed filter blur-[80px] z-10 pointer-events-none"
+        className="h-[300px] w-[300px] bg-[#ff5000] opacity-20 rounded-full fixed filter blur-[80px] z-10 pointer-events-none"
       ></div>
     </>
   );

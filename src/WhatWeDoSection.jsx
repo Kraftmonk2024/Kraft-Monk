@@ -1,7 +1,13 @@
+// WhatWeDoSection.js
 import React from "react";
 import CategorySection from "./CategorySection";
 
-const WhatWeDoSection = () => {
+const WhatWeDoSection = ({
+  onGraphicsClick,
+  onUIUXClick,
+  onWebDevClick,
+  onVideoClick,
+}) => {
   const categories = [
     {
       title: "Branding",
@@ -22,6 +28,7 @@ const WhatWeDoSection = () => {
         "PPT & Pitch Deck",
         "Packaging Design",
       ],
+      onClick: onGraphicsClick,
     },
     {
       title: "UI/UX Design",
@@ -32,6 +39,7 @@ const WhatWeDoSection = () => {
         "Conversion Rate Design",
         "Mobile App Design",
       ],
+      onClick: onUIUXClick,
     },
     {
       title: "Development",
@@ -42,6 +50,7 @@ const WhatWeDoSection = () => {
         "Web Hosting Setup",
         "Web Application",
       ],
+      onClick: onWebDevClick,
     },
     {
       title: "Video Editing",
@@ -52,6 +61,7 @@ const WhatWeDoSection = () => {
         "Explainer Videos",
         "Color Grading",
       ],
+      onClick: onVideoClick,
     },
   ];
 
@@ -67,7 +77,11 @@ const WhatWeDoSection = () => {
             {index > 0 && (
               <div className="w-full h-px relative border border-white/50"></div>
             )}
-            <CategorySection title={category.title} items={category.items} />
+            <CategorySection
+              title={category.title}
+              items={category.items}
+              onClick={category.onClick}
+            />
           </React.Fragment>
         ))}
       </div>

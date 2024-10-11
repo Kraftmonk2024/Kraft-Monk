@@ -12,7 +12,7 @@ const HeroSection = () => {
             Helping Businesses Grow <i className="ri-arrow-right-up-line"></i>{" "}
             Online with
           </span>
-          <span className="text-secondary">Digital Solutions.</span>
+          <span className="text-secondary"> Digital Solutions.</span>
         </div>
       </div>
       <div className="h-16 px-6 py-4 bg-black border-2 border-secondary flex items-center gap-2 transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0_rgba(238,117,14,1)]">

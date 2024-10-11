@@ -91,7 +91,7 @@
 
 
 /* video scroll animation */
-@keyframes scroll2 {
+/* @keyframes scroll2 {
     0% {
         transform: translateX(0);
     }
@@ -103,7 +103,7 @@
 
 .animate-scroll2 {
     animation: scroll2 20s linear infinite;
-}
+} */
 
 .video-container:hover .overlay {
     opacity: 0;
@@ -117,4 +117,20 @@
         height: auto;
         /* Make height responsive */
     }
+}
+
+
+
+
+
+
+
+
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+    /* This makes smooth scrolling work natively */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll issues */
 }

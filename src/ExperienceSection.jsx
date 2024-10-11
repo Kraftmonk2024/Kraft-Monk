@@ -22,19 +22,25 @@ const ExperienceSection = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-10 py-12 flex-wrap">
-        <div className="flex gap-5 w-full">
-          {Array(3).fill().map((_, index) => (
-            <div key={index} className="w-[33.3%] h-fit flex items-center justify-center rounded-full overflow-hidden px-5">
-              <img className="w-20 rounded-full aspect-square object-cover" src={`images/img21.jpg`} alt={`Client ${index + 1}`} />
+      <div className="flex items-center justify-center gap-6 py-12 flex-wrap">
+        <div className="flex w-full">
+         
+            <div className="w-[33.3%] h-fit flex items-center justify-center rounded-full overflow-hidden px-5">
+              <img className="w-20 rounded-full aspect-square object-cover" src="./logo/logo1.jpg" alt="logo"/>
             </div>
-          ))}
+            <div className="w-[33.3%] h-fit flex items-center justify-center rounded-full overflow-hidden px-5">
+              <img className="w-20 rounded-full aspect-square object-cover" src="./logo/logo2.jpg" alt="logo"/>
+            </div>
+            <div className="w-[33.3%] h-fit flex items-center justify-center rounded-full overflow-hidden px-5">
+              <img className="w-20 rounded-full aspect-square object-cover" src="./logo/logo3.jpg" alt="logo"/>
+            </div>
+        
         </div>
 
         <div className="flex justify-center gap-5">
           {Array(2).fill().map((_, index) => (
-            <div key={index} className="w-40 aspect-video overflow-hidden bg-red-700">
-              <img src={`images/img14.jpg`} alt={`Project ${index + 1}`} />
+            <div key={index} className="w-40 flex justify-center items-center aspect-video overflow-hidden">
+              <img src={`logo/logo${index + 4}.png`} alt={`Project ${index + 1}`} />
             </div>
           ))}
         </div>
