@@ -9,7 +9,7 @@ const VideoStrip = forwardRef((props, ref) => {
   ] // Placeholder for multiple videos
 
   return (
-    <div className="w-full flex flex-col mt-52 overflow-hidden h-[125vh]">
+    <div className="w-full flex flex-col mt-52 overflow-hidden h-auto">
       <div className="mb-16 flex flex-col gap-6 px-8 md:px-36">
         <h2 className="w-[309px] text-center text-white text-4xl font-normal font-['Inter'] leading-10">
           For Video Editing
