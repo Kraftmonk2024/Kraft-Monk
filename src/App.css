@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    @apply p-0 m-0
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    @apply
+    bg-zinc-800
+}
+
+::-webkit-scrollbar-track {
+    margin-block: 0.1em;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100vh;
+    background: #171717;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF631B;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    transform: rotate(-5deg);
+    width: 200%;
+    transform-origin: center;
+}
+
+.scroll-text {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+
+/* image scrolling animation */
+.animate-scroll {
+    display: flex;
+    white-space: nowrap;
+    /* Ensure content scrolls horizontally without wrapping */
+}
+
+/* The main container */
+.image-container {
+    overflow: hidden;
+    /* Hide the overflow of the row */
+    width: 100vw;
+    /* Ensure it matches the viewport width */
+}
+
+/* The row of images */
+.image-row {
+    display: flex;
+    /* Align images in a row */
+    width: calc(100vw * 2);
+    /* Extend width to allow overflow */
+    /* Flex will push images in a single row without breaking */
+}
+
+/* Style the images */
+.image-row img {
+    width: 33vw;
+    /* Adjust the width of each image to take 1/3 of the screen */
+    object-fit: cover;
+    /* Ensure the image fits the area */
+}
+
+/* Allow the last image to overflow the container */
+.image-row img:last-child {
+    margin-right: -33vw;
+    /* Negative margin to make the image overflow by 1/3 */
+}
+
+
+
+/* video scroll animation */
+@keyframes scroll2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll2 {
+    animation: scroll2 20s linear infinite;
+}
+
+.video-container:hover .overlay {
+    opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-container {
+        width: 80vw;
+        /* Adjust for smaller screens */
+        height: auto;
+        /* Make height responsive */
+    }
+}
