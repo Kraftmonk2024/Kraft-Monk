@@ -1,6 +1,7 @@
 // WhatWeDoSection.js
 import React from "react";
 import CategorySection from "./CategorySection";
+import WhatWeWorkSection from "./WhatWeWorkSection";
 
 const WhatWeDoSection = ({
   onGraphicsClick,
@@ -85,6 +86,7 @@ const WhatWeDoSection = ({
           </React.Fragment>
         ))}
       </div>
+      <WhatWeWorkSection />
     </div>
   );
 };

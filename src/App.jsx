@@ -4,7 +4,6 @@ import HeroSection from "./HeroSection";
 import Strips from "./Strips";
 import WhatWeDoSection from "./WhatWeDoSection";
 import Cursor from "./Cursor.jsx";
-import WhatWeWorkSection from "./WhatWeWorkSection.jsx";
 import GraphicsSection from "./GraphicsSection.jsx";
 import WebAppDevelopment from "./WebAppDevelopment.jsx";
 import UIUXProductDesign from "./UIUXProductDesign.jsx";
@@ -38,7 +37,6 @@ const App = () => {
   // Function to scroll to the desired section
   const scrollToSection = (sectionRef) => {
     if (sectionRef.current) {
-      console.log("Scrolling to: ", sectionRef.current);
       sectionRef.current.scrollIntoView({
         behavior: "smooth", // Smooth scroll
         block: "start", // Align to top of the viewport
@@ -52,7 +50,7 @@ const App = () => {
   return (
     <div className="w-full bg-primary relative">
       <Cursor mousePosition={mousePosition} />
-      <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
+      <div className="w-full min-h-screen flex flex-col">
         <Navbar />
         <HeroSection />
         <Strips />
@@ -62,7 +60,6 @@ const App = () => {
           onWebDevClick={() => scrollToSection(webDevSectionRef)}
           onVideoClick={() => scrollToSection(videoSectionRef)}
         />
-        <WhatWeWorkSection />
         <GraphicsSection ref={graphicsSectionRef} />
         <WebAppDevelopment ref={webDevSectionRef} />
         <UIUXProductDesign ref={uiuxSectionRef} />

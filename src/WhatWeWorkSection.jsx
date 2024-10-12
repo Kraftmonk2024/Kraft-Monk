@@ -2,7 +2,7 @@ import React from "react";
 
 const WhatWeWorkSection = () => {
   return (
-    <div className="w-full sticky top-[5vh] left-0 flex flex-col items-center px-8 md:px-24 py-24 ">
+    <div className="w-full sticky top-[5vh] left-0 flex flex-col items-center  pt-24 mt-11">
       <div className="w-full max-w-[1240px] mb-16">
         <span className="text-white/70 text-5xl font-bold ">What </span>
         <span className="text-[#ff631b] text-5xl font-bold ">we work!</span>
