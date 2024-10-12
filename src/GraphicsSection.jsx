@@ -3,22 +3,24 @@ import React, { forwardRef, useEffect, useRef } from "react";
 const ScrollingRow = ({ children }) => {
   const scrollRef = useRef(null);
 
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (scrollContainer) {
-      const scrollContent = scrollContainer.firstChild;
-      let scrollAmount = 0;
-      const step = () => {
-        scrollAmount += 0.5;
-        if (scrollAmount >= scrollContent.scrollWidth / 2) {
-          scrollAmount = 0;
-        }
-        scrollContainer.scrollLeft = scrollAmount;
-        requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    }
-  }, []);
+// uncomment to enable card movin beacouse fo not movin continously stoping at end for a while i commented this
+
+  // useEffect(() => {
+  //   const scrollContainer = scrollRef.current;
+  //   if (scrollContainer) {
+  //     const scrollContent = scrollContainer.firstChild;
+  //     let scrollAmount = 0;
+  //     const step = () => {
+  //       scrollAmount += 0.5;
+  //       if (scrollAmount >= scrollContent.scrollWidth / 2) {
+  //         scrollAmount = 0;
+  //       }
+  //       scrollContainer.scrollLeft = scrollAmount;
+  //       requestAnimationFrame(step);
+  //     };
+  //     requestAnimationFrame(step);
+  //   }
+  // }, []);
 
   return (
     <div ref={scrollRef} className="overflow-hidden">
