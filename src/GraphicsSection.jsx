@@ -34,16 +34,16 @@ const ScrollingRow = ({ children }) => {
 
 const GraphicsSection = forwardRef((props, ref) => {
   return (
-    <div ref={ref} className="w-full flex flex-col py-24 overflow-y-hidden">
+    <div ref={ref} className="w-full flex flex-col mt-10 overflow-y-hidden">
       {/* Header Section */}
-      <div className="w-full max-w-[1240px] mb-16 flex flex-col gap-6 px-8 md:px-36">
-        <div className="text-start text-white text-4xl font-normal font-['Inter'] leading-10">
+      <div className="w-full max-w-[1240px] mb-12 lg:mb-16 flex flex-col gap-4 lg:gap-6 px-5 md:px-10 lg:px-28">
+        <div className="text-start text-white text-3xl lg:text-4xl font-normal font-['Inter'] leading-10">
           For Graphic Design’s
         </div>
-        <div className="text-start text-white text-[50px] font-extrabold font-['Inter'] leading-10">
+        <div className="text-start text-white text-[30px] lg:text-[50px] font-extrabold font-['Inter'] leading-10">
           TO STANDOUT FROM THE CROWD
         </div>
-        <div className="w-[1231px] h-11 justify-start items-center gap-3 inline-flex">
+        <div className="w-full flex-wrap justify-start items-center gap-3 inline-flex">
           {[
             "Print Design",
             "Banner & Ads",
@@ -55,7 +55,7 @@ const GraphicsSection = forwardRef((props, ref) => {
               key={index}
               className="px-4 py-2.5 rounded-[100px] border border-[#ff631b] justify-center items-center gap-2.5 flex"
             >
-              <div className="text-center text-white text-lg font-medium font-['SF Pro Display'] uppercase leading-normal">
+              <div className="text-center text-white text-base lg:text-lg font-medium font-['SF Pro Display'] uppercase leading-normal">
                 {text}
               </div>
             </div>

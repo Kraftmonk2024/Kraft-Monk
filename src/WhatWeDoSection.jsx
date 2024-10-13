@@ -67,12 +67,12 @@ const WhatWeDoSection = ({
   ];
 
   return (
-    <div className="w-full flex flex-col items-center px-8 md:px-24 py-24 bg-black">
-      <div className="w-full max-w-[1240px] mb-16">
-        <span className="text-white/70 text-5xl font-bold">What </span>
-        <span className="text-[#ff631b] text-5xl font-bold">we do!</span>
+    <div className="w-full flex flex-col items-center px-5  md:px-10 lg:px-24 py-20 md:py-28 bg-black">
+      <div className="w-full text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-8 lg:mb-16">
+        <span className="text-white/70 font-bold">What </span>
+        <span className="text-[#ff631b]  font-bold">we do!</span>
       </div>
-      <div className="w-full max-w-[1240px] flex-col justify-start items-start gap-8 inline-flex">
+      <div className="w-full flex-col justify-start items-start gap-8 inline-flex">
         {categories.map((category, index) => (
           <React.Fragment key={category.title}>
             {index > 0 && (

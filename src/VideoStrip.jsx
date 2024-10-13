@@ -9,24 +9,24 @@ const VideoStrip = forwardRef((props, ref) => {
   ] // Placeholder for multiple videos
 
   return (
-    <div className="w-full flex flex-col mt-52 overflow-hidden h-auto">
-      <div className="mb-16 flex flex-col gap-6 px-8 md:px-36">
-        <h2 className="w-[309px] text-center text-white text-4xl font-normal font-['Inter'] leading-10">
+    <div className="w-full flex flex-col mt-20 lg:mt-36 overflow-hidden h-auto">
+      <div className="mb-10 lg:mb-16 flex flex-col gap-4 lg:gap-6 px-5 md:px-28">
+        <h2 className="w-full text-start text-white text-3xl lg:text-4xl font-normal font-['Inter'] leading-10">
           For Video Editing
         </h2>
-        <h1 className="w-[859px] text-center text-[#ee750e] text-[50px] font-extrabold font-['Inter'] leading-10">
+        <h1 className="w-full text-start text-[#ee750e] text-[30px] lg:text-[50px] font-extrabold font-['Inter'] leading-10">
           TO GROW ON SOCIAL MEDIA FAST
         </h1>
       </div>
 
       <div className="w-[100%] relative flex origin-top-left rotate-[-0deg] py-2">
         <div className="flex justify-center w-full">
-          <div className="flex animate-scroll2">
+          <div className="flex animate-scroll2 ">
             {videoItems.map((videoSrc, index) => (
               <div className="flex-shrink-0 px-4" key={index}>
-                <div className="relative video-container">
+                <div className="relative video-container ">
                   <video
-                    className="w-[20vw] h-[496.07px] object-cover rounded-[24.80px]"
+                    className="w-[20vw] h-[300px] lg:h-[496.07px] object-cover rounded-[24.80px]"
                     autoPlay
                     muted
                     loop

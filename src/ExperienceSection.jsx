@@ -2,25 +2,27 @@ import React from 'react';
 
 const ExperienceSection = () => {
   return (
-    <section className="py-36 px-4 md:p-36 flex gap-20 bg-[#131313]">
-      <div className="w-[652px] h-[272px] flex-col justify-start items-start gap-[30px] inline-flex">
-        <h2 className="self-stretch text-white text-[56px] font-medium">Trusted by fast-moving companies & Start-ups</h2>
-        <div className="w-[331px] h-px relative border border-black/10"></div>
-        <div className="w-[581px] justify-between items-center inline-flex">
-          <div className="flex-col justify-start items-start inline-flex">
-            <h3 className="text-[#fe3900] text-4xl font-medium">3+ Year</h3>
-            <p className="text-white text-[28px] font-normal">Experience</p>
-          </div>
-          <div className="flex-col justify-start items-start inline-flex">
-            <h3 className="text-[#fe3900] text-4xl font-medium">20+</h3>
-            <p className="text-white text-[28px] font-normal">Clients</p>
-          </div>
-          <div className="flex-col justify-start items-start inline-flex">
-            <h3 className="text-[#fe3900] text-4xl font-medium">50+</h3>
-            <p className="text-white text-[28px] font-normal">Projects Delivered</p>
-          </div>
+    <section className="py-4 lg:py-36 px-4 md:p-14 lg:p-36 flex flex-col lg:flex-row gap-0 lg:gap-20 bg-[#131313]">
+       <div class="w-full  flex-col justify-start items-start gap-[10px] lg:gap-[30px] inline-flex">
+            <div class="self-stretch text-white  text-[30px] lg:text-[56px] font-medium ">Trusted by fast-moving
+                companies
+                & Start-up</div>
+            <div class="w-[331px] h-px relative border border-black/10"></div>
+            <div class=" flex justify-evenly lg:justify-start gap-6 w-full lg:gap-10 items-center flex-wrap">
+                <div class="flex-col justify-start items-start  inline-flex">
+                    <div class="text-[#fe3900] w-full text-center lg:text-start text-3xl lg:text-4xl font-medium ">3+ Year</div>
+                    <div class="text-white text-[24px] lg:text-[28px] font-normal ">Experience</div>
+                </div>
+                <div class="flex-col justify-start items-start inline-flex">
+                    <div class="text-[#fe3900] w-full text-center lg:text-start text-3xl lg:text-4xl font-medium ">20+</div>
+                    <div class="text-white text-[24px] lg:text-[28px] font-normal ">Clients</div>
+                </div>
+                <div class="flex-col justify-start items-start inline-flex">
+                    <div class="text-[#fe3900] w-full text-center lg:text-start text-3xl lg:text-4xl font-medium ">50+</div>
+                    <div class="text-white text-[24px] lg:text-[28px] font-normal ">Projects Delivered</div>
+                </div>
+            </div>
         </div>
-      </div>
 
       <div className="flex items-center justify-center gap-6 py-12 flex-wrap">
         <div className="flex w-full">
@@ -39,7 +41,7 @@ const ExperienceSection = () => {
 
         <div className="flex justify-center gap-5">
           {Array(2).fill().map((_, index) => (
-            <div key={index} className="w-40 flex justify-center items-center aspect-video overflow-hidden">
+            <div key={index} className="w-28 md:w-40 flex justify-center items-center aspect-video overflow-hidden">
               <img src={`logo/logo${index + 4}.png`} alt={`Project ${index + 1}`} />
             </div>
           ))}
