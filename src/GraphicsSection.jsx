@@ -76,7 +76,7 @@ const GraphicsSection = forwardRef((props, ref) => {
                   <img
                     src={`images/${img}.jpg`}
                     alt={`Design ${index + 1}`}
-                    className="w-full h-[35vh] object-cover rounded-md shadow-lg"
+                    className="w-full  h-[25vh] md:h-[35vh] object-cover rounded-md shadow-lg"
                   />
                 </div>
               ))}
@@ -93,7 +93,7 @@ const GraphicsSection = forwardRef((props, ref) => {
                   <img
                     src={`images/${img}.jpg`}
                     alt={`Design ${index + 6}`}
-                    className="w-full h-[35vh] object-cover rounded-md shadow-lg"
+                    className="w-full h-[25vh] md:h-[35vh] object-cover rounded-md shadow-lg"
                   />
                 </div>
               ))}
@@ -106,11 +106,11 @@ const GraphicsSection = forwardRef((props, ref) => {
             <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-gray-900 to-transparent z-10" />
             <ScrollingRow>
               {["img10", "img11", "img12", "img13", "img14"].map((img, index) => (
-                <div key={index} className={`flex-none w-${index % 4 === 0 ? '5' : '3'}/12 px-2`}>
+                <div key={index} className={`flex-none w-${index % 4 === 0 ? '5' : '4'}/12 px-2`}>
                   <img
                     src={`images/${img}.jpg`}
                     alt={`Design ${index + 10}`}
-                    className="w-full h-[35vh] object-cover rounded-md shadow-lg"
+                    className="w-full h-[25vh] md:h-[35vh] object-cover rounded-md shadow-lg"
                   />
                 </div>
               ))}

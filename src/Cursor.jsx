@@ -38,12 +38,12 @@ const Cursor = () => {
       <div
         ref={cursorRef}
         id="cursor"
-        className="h-3 w-3 bg-[#ff5000] rounded-full fixed z-50 pointer-events-none"
+        className="h-3 w-3 bg-[#ff5000] rounded-full hidden sm:block fixed z-50 pointer-events-none"
       ></div>
       <div
         ref={blurRef}
         id="cursor-blur"
-        className="h-[300px] w-[300px] bg-[#ff5000] opacity-20 rounded-full fixed filter blur-[80px] z-10 pointer-events-none"
+        className="h-[300px] w-[300px] bg-[#ff5000] opacity-20 rounded-full hidden sm:block  fixed filter blur-[80px] z-10 pointer-events-none"
       ></div>
     </>
   );

@@ -17,7 +17,7 @@ const WhatWeWorkSection = () => {
             <div class="flex flex-wrap gap-8 ">
 
                 {/* <!-- card 1 --> */}
-                <div class="bg-[#235347] sticky top-[15vh] w-full  flex h-[315px]  md:h-[415px]">
+                <div class="bg-[#235347] sticky top-[15vh] w-full  flex h-[235px]  md:h-[415px]">
                     <div class="w-full md:w-1/2 h-full">
                         <img class="w-full h-full cover" src="card1.png" alt=""></img>
                     </div>
@@ -68,7 +68,7 @@ const WhatWeWorkSection = () => {
                 </div>
 
                 {/* <!-- card 2 --> */}
-                <div class="bg-[#003A70] sticky top-[18vh] w-full flex h-[315px]  md:h-[415px]">
+                <div class="bg-[#003A70] sticky top-[18vh] w-full flex h-[235px]  md:h-[415px]">
                     <div class=" w-full md:w-1/2 h-full">
                         <img class="w-full h-full cover" src="card2.png" alt=""></img>
                     </div>
@@ -119,7 +119,7 @@ const WhatWeWorkSection = () => {
                 </div>
 
                 {/* <!-- card 3 --> */}
-                <div class="bg-[#e38326] sticky top-[22vh] w-full  flex h-[315px]  md:h-[415px]">
+                <div class="bg-[#e38326] sticky top-[22vh] w-full  flex h-[235px]  md:h-[415px]">
                     <div class="w-full md:w-1/2 h-full">
                         <img class="w-full h-full cover " src="card3.png" alt=""></img>
                     </div>
@@ -170,7 +170,7 @@ const WhatWeWorkSection = () => {
                 </div>
 
                 {/* <!-- card 4 --> */}
-                <div class="bg-[#052c2d] sticky top-[15vh] w-full  flex h-[315px]  md:h-[415px]">
+                <div class="bg-[#052c2d] sticky top-[15vh] w-full  flex h-[235px]  md:h-[415px]">
                     <div class=" w-full md:w-1/2 h-full">
                         <img class="w-full h-full cover" src="card4.png" alt=""></img>
                     </div>

@@ -13,8 +13,8 @@ const WebAppDevelopment = forwardRef((props, ref) => {
       </div>
 
       <div className="w-full flex flex-col md:flex-row gap-10 lg:gap-5">
-        <div className="w-full md:w-1/2 h-full flex flex-col gap-3">
-        <div class="h-[40vh] md:h-[50vh]">
+        <div className="w-full md:w-1/2 aspect-video  flex flex-col gap-3">
+        <div class=" md:h-[50vh]">
           <img className="w-full h-full cover rounded-3xl" src="./images2/web1.jpg" alt="" />
         </div>
           <a href="https://upskillmafia.com/mern/">
@@ -29,8 +29,8 @@ const WebAppDevelopment = forwardRef((props, ref) => {
           </a>
         </div>
 
-        <div className="w-full md:w-1/2 h-full flex flex-col gap-3">
-        <div class="h-[40vh] md:h-[50vh]">
+        <div className="w-full md:w-1/2 aspect-video  flex flex-col gap-3">
+        <div class=" md:h-[50vh]">
           <img className="w-full h-full cover rounded-3xl" src="./images2/web2.jpg" alt="" />
         </div>
           <a href="https://tutedude.com/tracks/fullstackdevelopment">
