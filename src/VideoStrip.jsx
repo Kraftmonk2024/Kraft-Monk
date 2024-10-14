@@ -56,15 +56,30 @@
 // });
 
 // export default VideoStrip;
-import React, { forwardRef } from "react";
+
+
+import React, { forwardRef, useRef } from "react";
 
 const VideoStrip = forwardRef((props, ref) => {
   const videoItems = [
     "./videos/video1.mp4",
     "./videos/video2.mp4",
     "./videos/video3.mp4",
-    "./videos/video1.mp4",
+    "./videos/video4.mp4",
   ]; // Placeholder for multiple videos
+
+  // Function to handle the hover event (play from start)
+  const handleMouseEnter = (e) => {
+    const video = e.target;
+    video.currentTime = 0; // Reset video to start
+    video.play(); // Play the video
+  };
+
+  // Function to handle mouse leave (pause video)
+  const handleMouseLeave = (e) => {
+    const video = e.target;
+    video.pause(); // Pause the video
+  };
 
   return (
     <div className="w-full flex flex-col mt-20 lg:mt-36 overflow-hidden h-auto">
@@ -81,20 +96,20 @@ const VideoStrip = forwardRef((props, ref) => {
         <div className="flex justify-start w-max">
           {videoItems.map((videoSrc, index) => (
             <div className="flex-shrink-0 px-2 md:px-4" key={index}>
-              <div className="relative video-container">
+              <div className="relative video-container rounded-[15px] md:rounded-[20px] lg:rounded-[24.80px]">
                 <video
                   className="w-[75vw] md:w-[35vw] lg:w-[18vw] h-[200px] md:h-[300px] lg:h-[496.07px] object-cover rounded-[15px] md:rounded-[20px] lg:rounded-[24.80px]"
-                  autoPlay
                   muted
-                  loop
                   playsInline
+                  onMouseEnter={handleMouseEnter} // Play from start on hover
+                  onMouseLeave={handleMouseLeave} // Pause on mouse leave
                 >
                   <source src={videoSrc} type="video/mp4" />
                 </video>
                 <div className="overlay absolute inset-0 transition-opacity duration-300">
                   <img
                     className="w-full h-full object-cover rounded-[15px] md:rounded-[20px] lg:rounded-[24.80px]"
-                    src={`./images/img${index + 1}.jpg`}
+                    src={`./videos/thumbnail${index + 1}.jpg`}
                     alt={`Card ${index + 1}`}
                   />
                   <div className="overlay absolute inset-0 bg-black bg-opacity-20 rounded-[15px] md:rounded-[20px] lg:rounded-[24.80px]"></div>
@@ -112,3 +127,4 @@ const VideoStrip = forwardRef((props, ref) => {
 });
 
 export default VideoStrip;
+

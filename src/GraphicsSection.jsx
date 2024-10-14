@@ -71,7 +71,7 @@ const GraphicsSection = forwardRef((props, ref) => {
             <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-gray-900 to-transparent z-10" />
             <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-gray-900 to-transparent z-10" />
             <ScrollingRow>
-              {["img1", "img2", "img3", "img4", "img5"].map((img, index) => (
+              {["img1", "img2", "img3", "img4", "img5" , "img6" , "img7"].map((img, index) => (
                 <div key={index} className={`flex-none w-${index % 3 === 0 ? '4' : '3'}/12 px-2`}>
                   <img
                     src={`images/${img}.jpg`}
@@ -88,7 +88,7 @@ const GraphicsSection = forwardRef((props, ref) => {
             <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-gray-900 to-transparent z-10" />
             <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-gray-900 to-transparent z-10" />
             <ScrollingRow>
-              {["img6", "img7", "img8", "img9"].map((img, index) => (
+              {["img8", "img9", "img10", "img11" , "img12" , "img13"].map((img, index) => (
                 <div key={index} className={`flex-none w-${index % 2 === 0 ? '5' : '3'}/12 px-2`}>
                   <img
                     src={`images/${img}.jpg`}
@@ -105,7 +105,7 @@ const GraphicsSection = forwardRef((props, ref) => {
             <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-gray-900 to-transparent z-10" />
             <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-gray-900 to-transparent z-10" />
             <ScrollingRow>
-              {["img10", "img11", "img12", "img13", "img14"].map((img, index) => (
+              {["img14", "img15", "img16", "img17", "img18" , "img19"].map((img, index) => (
                 <div key={index} className={`flex-none w-${index % 4 === 0 ? '5' : '4'}/12 px-2`}>
                   <img
                     src={`images/${img}.jpg`}

@@ -107,6 +107,7 @@
 
 .video-container:hover .overlay {
     opacity: 0;
+    display: none;
 }
 
 /* Responsive adjustments */
