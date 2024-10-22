@@ -35,10 +35,12 @@ const Footer = () => {
               className="ri-linkedin-fill hover:text-secondary
                          text-white text-xl"
             ></i>
-            <i
-              className="ri-instagram-line hover:text-secondary
+            <a href="" target="_blank">
+              <i
+                className="ri-instagram-line hover:text-secondary
                          text-white text-xl"
-            ></i>
+              ></i>
+            </a>
             <i
               className="ri-youtube-line hover:text-secondary
                          text-white text-xl"

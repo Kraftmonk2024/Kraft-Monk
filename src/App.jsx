@@ -38,9 +38,9 @@ const App = () => {
   const scrollToSection = (sectionRef) => {
     if (sectionRef.current) {
       sectionRef.current.scrollIntoView({
-        behavior: "smooth", // Smooth scroll
-        block: "start", // Align to top of the viewport
-        inline: "nearest", // Prevent unwanted horizontal scrolling
+        behavior: "smooth", 
+        block: "start",  
+        inline: "nearest",
       });
     }
   };

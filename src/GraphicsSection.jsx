@@ -3,44 +3,27 @@ import React, { forwardRef, useEffect, useRef } from "react";
 const ScrollingRow = ({ children }) => {
   const scrollRef = useRef(null);
 
-// uncomment to enable card movin beacouse fo not movin continously stoping at end for a while i commented this
-
-  // useEffect(() => {
-  //   const scrollContainer = scrollRef.current;
-  //   if (scrollContainer) {
-  //     const scrollContent = scrollContainer.firstChild;
-  //     let scrollAmount = 0;
-  //     const step = () => {
-  //       scrollAmount += 0.5;
-  //       if (scrollAmount >= scrollContent.scrollWidth / 2) {
-  //         scrollAmount = 0;
-  //       }
-  //       scrollContainer.scrollLeft = scrollAmount;
-  //       requestAnimationFrame(step);
-  //     };
-  //     requestAnimationFrame(step);
-  //   }
-  // }, []);
-
   return (
     <div ref={scrollRef} className="overflow-hidden">
       <div className="flex animate-scroll">
         {children}
-        {children} {/* Duplicate content for continuous scrolling */}
+        {children}
       </div>
     </div>
   );
 };
+
+// font earlier : font - ["Inter"];
 
 const GraphicsSection = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="w-full flex flex-col mt-10 overflow-y-hidden">
       {/* Header Section */}
       <div className="w-full max-w-[1240px] mb-12 lg:mb-16 flex flex-col gap-4 lg:gap-6 px-5 md:px-10 lg:px-28">
-        <div className="text-start text-white text-3xl lg:text-4xl font-normal font-['Inter'] leading-10">
+        <div className="text-start text-white text-3xl lg:text-4xl font-normal  leading-10">
           For Graphic Design’s
         </div>
-        <div className="text-start text-white text-[30px] lg:text-[50px] font-extrabold font-['Inter'] leading-10">
+        <div className="text-start text-white text-[30px] lg:text-[50px] font-extrabold leading-10">
           TO STANDOUT FROM THE CROWD
         </div>
         <div className="w-full flex-wrap justify-start items-center gap-3 inline-flex">
