@@ -1,8 +1,8 @@
-import React from "react";
+import React ,{forwardRef} from "react";
 
-const ContactSection = () => {
+const ContactSection = forwardRef((props ,ref) => {
   return (
-    <section className="py-0 lg:py-36 px-4 mt-20 md:p-10 lg:p-28 mb-20">
+    <section ref={ref} className="py-0 lg:py-36 px-4 mt-20 md:p-10 lg:p-28 mb-20">
       <div className="bg-[#EE750E] p-4 lg:p-9 flex flex-col gap-4 lg:gap-9 rounded-xl overflow-hidden">
         <h1 className="text-[#131313] text-[34px] lg:text-[56px] font-medium">
           Ready to turn your ideas into reality? Let's work together!
@@ -30,6 +30,6 @@ const ContactSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default ContactSection;

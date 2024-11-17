@@ -53,7 +53,7 @@ const UIUXProductDesign = forwardRef((props, ref) => {
   ];
 
   return (
-    <div className="w-full flex flex-col mt-10 sm:mt-16 md:mt-20 lg:mt-36 px-4 sm:px-5 md:px-10 lg:px-28">
+    <div ref={ref} className="w-full flex flex-col mt-10 sm:mt-16 md:mt-20 lg:mt-36 px-4 sm:px-5 md:px-10 lg:px-28">
       <div className="w-full max-w-[1240px] mb-8 sm:mb-12 lg:mb-16 flex flex-col gap-4 sm:gap-6">
         <div className="text-start text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-8 sm:leading-10">
           For UI/UX and Product Designs

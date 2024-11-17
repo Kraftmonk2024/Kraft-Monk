@@ -20,6 +20,8 @@ const App = () => {
   const uiuxSectionRef = useRef(null);
   const webDevSectionRef = useRef(null);
   const videoSectionRef = useRef(null);
+  const contactSectionRef = useRef(null);
+  const whatWeWorkRef = useRef(null);
 
   // Track mouse movement for the cursor
   useEffect(() => {
@@ -38,23 +40,30 @@ const App = () => {
   const scrollToSection = (sectionRef) => {
     if (sectionRef.current) {
       sectionRef.current.scrollIntoView({
-        behavior: "smooth", 
-        block: "start",  
+        behavior: "smooth",
+        block: "start",
         inline: "nearest",
       });
     }
   };
 
-  
+  const handleScheduleClick = () => {
+    scrollToSection(contactSectionRef);
+  };
+
+  const onExploreWorkClick = () => {
+    scrollToSection(whatWeWorkRef);
+  };
 
   return (
     <div className="w-full bg-primary relative">
       <Cursor mousePosition={mousePosition} />
       <div className="w-full min-h-screen flex flex-col">
-        <Navbar />
-        <HeroSection />
+        <Navbar handleScheduleClick={handleScheduleClick} />
+        <HeroSection onExploreWorkClick={onExploreWorkClick} />
         <Strips />
         <WhatWeDoSection
+          whatWeWorkRef={whatWeWorkRef}
           onGraphicsClick={() => scrollToSection(graphicsSectionRef)}
           onUIUXClick={() => scrollToSection(uiuxSectionRef)}
           onWebDevClick={() => scrollToSection(webDevSectionRef)}
@@ -64,7 +73,7 @@ const App = () => {
         <WebAppDevelopment ref={webDevSectionRef} />
         <UIUXProductDesign ref={uiuxSectionRef} />
         <VideoStrip ref={videoSectionRef} />
-        <ContactSection />
+        <ContactSection ref={contactSectionRef} />
         <ExperienceSection />
         <Footer />
       </div>

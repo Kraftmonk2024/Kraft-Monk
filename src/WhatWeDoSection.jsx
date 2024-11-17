@@ -1,4 +1,3 @@
-// WhatWeDoSection.js
 import React from "react";
 import CategorySection from "./CategorySection";
 import WhatWeWorkSection from "./WhatWeWorkSection";
@@ -8,28 +7,23 @@ const WhatWeDoSection = ({
   onUIUXClick,
   onWebDevClick,
   onVideoClick,
+  whatWeWorkRef,
 }) => {
+  const onBrandingClick = () => {
+    whatWeWorkRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const categories = [
     {
-      title: "Branding",
+      title: "Development",
       items: [
-        "Logo Design",
-        "Brand Identity",
-        "Brand Guidelines",
-        "Brand Collateral",
-        "Social Media Branding",
+        "Front-End",
+        "Back-End",
+        "API & Database Development",
+        "Web Hosting Setup",
+        "Web Application",
       ],
-    },
-    {
-      title: "Graphic Design",
-      items: [
-        "Print Design",
-        "Social Media Graphics",
-        "Banner & Ads",
-        "PPT & Pitch Deck",
-        "Packaging Design",
-      ],
-      onClick: onGraphicsClick,
+      onClick: onWebDevClick,
     },
     {
       title: "UI/UX Design",
@@ -43,15 +37,26 @@ const WhatWeDoSection = ({
       onClick: onUIUXClick,
     },
     {
-      title: "Development",
+      title: "Branding",
       items: [
-        "Front-End",
-        "Back-End",
-        "API & Database Development",
-        "Web Hosting Setup",
-        "Web Application",
+        "Logo Design",
+        "Brand Identity",
+        "Brand Guidelines",
+        "Brand Collateral",
+        "Social Media Branding",
       ],
-      onClick: onWebDevClick,
+      onClick: onBrandingClick,
+    },
+    {
+      title: "Graphic Design",
+      items: [
+        "Print Design",
+        "Social Media Graphics",
+        "Banner & Ads",
+        "PPT & Pitch Deck",
+        "Packaging Design",
+      ],
+      onClick: onGraphicsClick,
     },
     {
       title: "Video Editing",
@@ -86,7 +91,7 @@ const WhatWeDoSection = ({
           </React.Fragment>
         ))}
       </div>
-      <WhatWeWorkSection />
+      <WhatWeWorkSection ref={whatWeWorkRef} />
     </div>
   );
 };

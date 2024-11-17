@@ -14,7 +14,7 @@ const CategorySection = ({ title, items ,onClick }) => {
           >
             <div
               className="text-white text-base lg:text-lg font-normal uppercase"
-              // onClick={() => onClick()}
+              onClick={() => onClick()}
             >
               {item}
             </div>

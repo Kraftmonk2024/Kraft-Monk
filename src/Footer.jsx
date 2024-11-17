@@ -35,7 +35,10 @@ const Footer = () => {
               className="ri-linkedin-fill hover:text-secondary
                          text-white text-xl"
             ></i>
-            <a href="" target="_blank">
+            <a
+              href="https://www.instagram.com/kraftmonk_official/"
+              target="_blank"
+            >
               <i
                 className="ri-instagram-line hover:text-secondary
                          text-white text-xl"

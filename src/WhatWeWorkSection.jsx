@@ -1,8 +1,11 @@
-import React from "react";
+import { React, forwardRef } from "react";
 
-const WhatWeWorkSection = () => {
+const WhatWeWorkSection = forwardRef((props, ref) => {
   return (
-    <div className="w-full sticky left-0 flex flex-col  items-center bg-gre pt-20 lg:pt-24 ">
+    <div
+      ref={ref}
+      className="w-full sticky left-0 flex flex-col  items-center bg-gre pt-20 lg:pt-24 "
+    >
       <div className="w-full text-3xl md:text-5xl lg:text-6xl  mb-3 lg:mb-10">
         <span className="text-white/70 font-bold ">What </span>
         <span className="text-[#ff631b] font-bold ">we work!</span>
@@ -16,7 +19,7 @@ const WhatWeWorkSection = () => {
           </div>
           <div className="flex flex-wrap gap-8 ">
             {/* <!-- card 1 --> */}
-            <div className="bg-[#235347] sticky top-[15vh] w-full  flex h-[235px]  md:h-[415px]">
+            <div className="rounded-xl overflow-hidden bg-[#235347] sticky top-[15vh] w-full  flex h-[235px]  md:h-[415px]">
               <div className="w-full lg:w-1/2 h-full">
                 <img
                   className="w-full h-full cover"
@@ -65,7 +68,7 @@ const WhatWeWorkSection = () => {
             </div>
 
             {/* <!-- card 2 --> */}
-            <div className="bg-[#003A70] sticky top-[18vh] w-full flex h-[235px]  md:h-[415px]">
+            <div className="rounded-xl overflow-hidden bg-[#003A70] sticky top-[18vh] w-full flex h-[235px]  md:h-[415px]">
               <div className=" w-full lg:w-1/2 h-full">
                 <img
                   className="w-full h-full cover"
@@ -114,7 +117,7 @@ const WhatWeWorkSection = () => {
             </div>
 
             {/* <!-- card 3 --> */}
-            <div className="bg-[#e38326] sticky top-[22vh] w-full  flex h-[235px]  md:h-[415px]">
+            <div className="rounded-xl overflow-hidden bg-[#e38326] sticky top-[22vh] w-full  flex h-[235px]  md:h-[415px]">
               <div className="w-full lg:w-1/2 h-full">
                 <img
                   className="w-full h-full cover "
@@ -163,7 +166,7 @@ const WhatWeWorkSection = () => {
             </div>
 
             {/* <!-- card 4 --> */}
-            <div className="bg-[#052c2d] sticky top-[15vh] w-full  flex h-[235px]  md:h-[415px]">
+            <div className="rounded-xl overflow-hidden bg-[#052c2d] sticky top-[15vh] w-full  flex h-[235px]  md:h-[415px]">
               <div className=" w-full lg:w-1/2 h-full">
                 <img
                   className="w-full h-full cover"
@@ -215,7 +218,6 @@ const WhatWeWorkSection = () => {
       </div>
     </div>
   );
-};
+});
 
 export default WhatWeWorkSection;
-
