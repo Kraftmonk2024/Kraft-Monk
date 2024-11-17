@@ -15,11 +15,11 @@ const HeroSection = ({ onExploreWorkClick }) => {
           <span className="text-secondary"> Digital Solutions.</span>
         </div>
       </div>
-      <div className=" px-3 lg:px-6 py-1 md:py-2 lg:py-4 bg-black border-2 border-secondary flex items-center gap-2 transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0_rgba(238,117,14,1)]">
-        <div
-          onClick={onExploreWorkClick}
-          className="text-white text-sm md:text-lg lg:text-xl font-medium uppercase leading-loose"
-        >
+      <div
+        onClick={onExploreWorkClick}
+        className=" px-3 lg:px-6 py-1 md:py-2 lg:py-4 bg-black border-2 border-secondary flex items-center gap-2 transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0_rgba(238,117,14,1)]"
+      >
+        <div className="text-white text-sm md:text-lg lg:text-xl font-medium uppercase leading-loose">
           Explore our Work
         </div>
         <div className="w-8 text-white text-2xl">

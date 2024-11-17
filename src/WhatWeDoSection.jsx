@@ -1,17 +1,19 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import CategorySection from "./CategorySection";
 import WhatWeWorkSection from "./WhatWeWorkSection";
 
-const WhatWeDoSection = ({
+const WhatWeDoSection = forwardRef(({
   onGraphicsClick,
   onUIUXClick,
   onWebDevClick,
   onVideoClick,
   whatWeWorkRef,
-}) => {
+},ref) => {
+  
   const onBrandingClick = () => {
     whatWeWorkRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
 
   const categories = [
     {
@@ -72,7 +74,7 @@ const WhatWeDoSection = ({
   ];
 
   return (
-    <div className="w-full flex flex-col items-center px-5  md:px-10 lg:px-24 py-20 md:py-28 bg-black">
+    <div ref={ref} className="w-full flex flex-col items-center px-5  md:px-10 lg:px-24 py-20 md:py-28 bg-black">
       <div className="w-full text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-8 lg:mb-16">
         <span className="text-white/70 font-bold">What </span>
         <span className="text-[#ff631b]  font-bold">we do!</span>
@@ -94,6 +96,6 @@ const WhatWeDoSection = ({
       <WhatWeWorkSection ref={whatWeWorkRef} />
     </div>
   );
-};
+});
 
 export default WhatWeDoSection;

@@ -1,6 +1,10 @@
 import React from "react";
 
-const Navbar = ({handleScheduleClick}) => {
+const Navbar = ({
+  handleScheduleClick,
+  onExploreWorkClick,
+  onServicesClick,
+}) => {
   return (
     <div className="w-full h-20 lg:h-24 px-3 md:px-10 lg:px-24 py-4 bg-black flex justify-between items-center">
       <div className="flex items-center gap-3">
@@ -14,17 +18,20 @@ const Navbar = ({handleScheduleClick}) => {
         </div>
       </div>
       <div className="flex items-center text-base lg:text-lg gap-4">
-        <div className="px-4 py-2.5  hidden md:block">
+        <div
+          onClick={onExploreWorkClick}
+          className="px-4 py-2.5  hidden md:block"
+        >
           <div className="text-white  font-medium leading-tight">Work</div>
         </div>
-        <div className="px-4 py-2.5  hidden md:block">
+        <div onClick={onServicesClick} className="px-4 py-2.5  hidden md:block">
           <div className="text-white  font-medium leading-tight">Services</div>
         </div>
-        <div className="px-2 lg:px-4 py-1 lg:py-3 bg-tertiary rounded-md flex items-center gap-1.5 transition-all hover:bg-secondary">
-          <div
-            onClick={handleScheduleClick}
-            className="text-white  font-medium leading-tight"
-          >
+        <div
+          onClick={handleScheduleClick}
+          className="px-2 lg:px-4 py-1 lg:py-3 bg-tertiary rounded-md flex items-center gap-1.5 transition-all hover:bg-secondary"
+        >
+          <div className="text-white  font-medium leading-tight">
             Schedule a call
           </div>
           <div className="w-5 text-xl text-white">

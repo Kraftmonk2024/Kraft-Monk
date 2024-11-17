@@ -22,6 +22,7 @@ const App = () => {
   const videoSectionRef = useRef(null);
   const contactSectionRef = useRef(null);
   const whatWeWorkRef = useRef(null);
+  const whatWeDoRef = useRef(null);
 
   // Track mouse movement for the cursor
   useEffect(() => {
@@ -55,15 +56,24 @@ const App = () => {
     scrollToSection(whatWeWorkRef);
   };
 
+  const onServicesClick = () => {
+    scrollToSection(whatWeDoRef);
+  };
+
   return (
     <div className="w-full bg-primary relative">
       <Cursor mousePosition={mousePosition} />
       <div className="w-full min-h-screen flex flex-col">
-        <Navbar handleScheduleClick={handleScheduleClick} />
+        <Navbar
+          handleScheduleClick={handleScheduleClick}
+          onExploreWorkClick={onExploreWorkClick}
+          onServicesClick={onServicesClick}
+        />
         <HeroSection onExploreWorkClick={onExploreWorkClick} />
         <Strips />
         <WhatWeDoSection
           whatWeWorkRef={whatWeWorkRef}
+          ref={whatWeDoRef}
           onGraphicsClick={() => scrollToSection(graphicsSectionRef)}
           onUIUXClick={() => scrollToSection(uiuxSectionRef)}
           onWebDevClick={() => scrollToSection(webDevSectionRef)}

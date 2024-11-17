@@ -10,12 +10,10 @@ const CategorySection = ({ title, items ,onClick }) => {
         {items.map((item, index) => (
           <div
             key={index}
+            onClick={() => onClick()}
             className="px-4 py-2.5 rounded-[100px] border border-white/40 flex items-center cursor-pointer hover:bg-white/10 transition-colors"
           >
-            <div
-              className="text-white text-base lg:text-lg font-normal uppercase"
-              onClick={() => onClick()}
-            >
+            <div className="text-white text-base lg:text-lg font-normal uppercase">
               {item}
             </div>
           </div>
