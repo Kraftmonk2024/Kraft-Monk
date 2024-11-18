@@ -11,7 +11,7 @@ const ContactSection = forwardRef((props ,ref) => {
           <div className="justify-start items-center gap-2 flex">
             <i className="ri-phone-line text-2xl relative text-white"></i>
             <div className=" text-black text-xl lg:text-2xl font-medium font-['Inter'] leading-loose">
-              +91 79994 9959
+              +91 79997 49959
             </div>
           </div>
           <div className="justify-start items-center gap-2 flex">
