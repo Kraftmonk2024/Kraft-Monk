@@ -94,11 +94,11 @@ const UIUXProductDesign = forwardRef((props, ref) => {
             className="relative w-full h-[200px] sm:h-[220px] md:h-[250px] lg:h-[300px] [perspective:1000px] hover:scale-[102%] transition-transform duration-300"
 
             // this line willflip cards on clicking
-            onClick={() => toggleFlip(index)}
+            // onClick={() => toggleFlip(index)}
 
             // these lones flip cards onhovering 
-            // onMouseEnter={() => handleCardInteraction(index)}
-            // onMouseLeave={() => handleCardInteraction(index)}
+            onMouseEnter={() => handleCardInteraction(index)}
+            onMouseLeave={() => handleCardInteraction(index)}
           >
             <div
               className={`relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] ${
