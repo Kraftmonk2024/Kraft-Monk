@@ -12,7 +12,6 @@ const WebAppDevelopment = forwardRef((props, ref) => {
         </div>
       </div>
       <div className="w-full flex flex-col md:flex-row gap-10 lg:gap-5">
-        
         {/* Left Image */}
         <div className="w-full md:w-1/2 aspect-video flex flex-col gap-3">
           <div className="md:h-[50vh]">
@@ -23,7 +22,7 @@ const WebAppDevelopment = forwardRef((props, ref) => {
             />
           </div>
           <a href="https://upskillmafia.com/mern/" target="_blank">
-            <div className="w-fit lg:h-16 px-4 lg:px-6 py-2 lg:py-4 bg-black border-2 border-secondary flex items-center gap-2 transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0_rgba(238,117,14,1)]">
+            <div className="w-full md:w-fit lg:h-16 px-4 lg:px-6 py-2 lg:py-4 md:bg-black border-2 border-secondary bg-orange-600 flex items-center gap-2 transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0_rgba(238,117,14,1)]">
               <div className="text-white text-base lg:text-xl font-medium uppercase leading-loose">
                 Check out
               </div>
@@ -47,7 +46,7 @@ const WebAppDevelopment = forwardRef((props, ref) => {
             href="https://tutedude.com/tracks/fullstackdevelopment"
             target="_blank"
           >
-            <div className="w-fit lg:h-16 px-4 lg:px-6 py-2 lg:py-4 bg-black border-2 border-secondary flex items-center gap-2 transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0_rgba(238,117,14,1)]">
+            <div className="w-full md:w-fit lg:h-16 px-4 lg:px-6 py-2 lg:py-4 md:bg-black border-2 border-secondary bg-orange-600 flex items-center gap-2 transition-all hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0_rgba(238,117,14,1)]">
               <div className="text-white text-base lg:text-xl font-medium uppercase leading-loose">
                 Check out
               </div>

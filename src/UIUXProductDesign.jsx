@@ -3,7 +3,13 @@ import React, { useState, forwardRef } from "react";
 const UIUXProductDesign = forwardRef((props, ref) => {
   const [flippedCards, setFlippedCards] = useState({});
 
+  //flipped cards on click
   const toggleFlip = (index) => {
+    setFlippedCards((prev) => ({ ...prev, [index]: !prev[index] }));
+  };
+
+  //flipping cards onhover
+  const handleCardInteraction = (index) => {
     setFlippedCards((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
@@ -53,7 +59,10 @@ const UIUXProductDesign = forwardRef((props, ref) => {
   ];
 
   return (
-    <div ref={ref} className="w-full flex flex-col mt-10 sm:mt-16 md:mt-20 lg:mt-36 px-4 sm:px-5 md:px-10 lg:px-28">
+    <div
+      ref={ref}
+      className="w-full flex flex-col mt-10 sm:mt-16 md:mt-20 lg:mt-36 px-4 sm:px-5 md:px-10 lg:px-28"
+    >
       <div className="w-full max-w-[1240px] mb-8 sm:mb-12 lg:mb-16 flex flex-col gap-4 sm:gap-6">
         <div className="text-start text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-8 sm:leading-10">
           For UI/UX and Product Designs
@@ -83,7 +92,13 @@ const UIUXProductDesign = forwardRef((props, ref) => {
           <div
             key={index}
             className="relative w-full h-[200px] sm:h-[220px] md:h-[250px] lg:h-[300px] [perspective:1000px] hover:scale-[102%] transition-transform duration-300"
+
+            // this line willflip cards on clicking
             onClick={() => toggleFlip(index)}
+
+            // these lones flip cards onhovering 
+            // onMouseEnter={() => handleCardInteraction(index)}
+            // onMouseLeave={() => handleCardInteraction(index)}
           >
             <div
               className={`relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] ${
