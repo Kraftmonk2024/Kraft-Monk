@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="justify-start items-center gap-2 flex">
               <i className="ri-phone-line text-2xl relative text-secondary"></i>
               <div className=" text-gray-100 text-xl lg:text-2xl  font-['Inter'] leading-loose">
-                +91 79994 9959
+                +91 79997 49959
               </div>
             </div>
             <div className="justify-start items-center gap-2 flex">
